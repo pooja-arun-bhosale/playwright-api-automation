@@ -114,10 +114,3 @@ Tests use a **Client → Fixture → Test** layered approach:
 - **Tests** consume fixtures and test-data JSON — no HTTP boilerplate needed
 
 ---
-
-## CI Behavior
-
-`playwright.config.js` is CI-aware. When `CI=true`:
-- Tests run serially (`workers: 1`) to avoid race conditions on the shared API
-- Failed tests retry up to 2 times
-- `test.only` left in code causes the build to fail
